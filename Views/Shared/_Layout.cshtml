@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WashCar</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WashCar.styles.css" asp-append-version="true" />
+    <link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="~/icones/icones/Lava Devagar.png" width="110"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Privacy">
+                                <img src="~/icones/icones/Politica.png" width="20">
+                                Política
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Clientes" asp-action="Index"><img src="~/icones/icones/Cliente.png" width="20"> Clientes</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Funcionarios" asp-action="Index"><img src="~/icones/icones/Funcionario.png" width="23"> Funcionário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Carroes" asp-action="Index"><img src="~/icones/icones/Carro.png" width="26"> Carros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Lavagems" asp-action="Index"><img src="~/icones/icones/Lavagem.png" width="20"> Lavagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="TipoLavagems" asp-action="Index"><img src="~/icones/icones/Lavagem.png" width="20"> Tipo Lavagens</a>
+                        </li>
+
+
+
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                        </ul>
+                        <partial name="_LoginPartial" />
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   <footer class="border-top text-muted">
+        <div style="text-align:center" class="container">
+            &copy; 2024 - Lava Devegar - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
+            <a href="https://wa.me/5579988548709" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><img src="~/icones/icones/Whatsapp.png" width="30" height="30"></a></a>
+            <a href="https://instagram.com/eipedrogama" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> <img src="~/icones/icones/Instagram.png" width="30" height="30"></a></a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@model WashCarLavaDevagar.Models.Funcionario
+
+@{
+    ViewData["Title"] = "Cadastro de Funcionários";
+}
+
+<h1>Cadastro de Funcionários</h1>
+
+<h4>Funcionario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeF" class="control-label"></label>
+                <input asp-for="NomeF" class="form-control" />
+                <span asp-validation-for="NomeF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnderecoF" class="control-label"></label>
+                <input asp-for="EnderecoF" class="form-control" />
+                <span asp-validation-for="EnderecoF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataNasc" class="control-label"></label>
+                <input asp-for="DataNasc" class="form-control" />
+                <span asp-validation-for="DataNasc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index"><img src="~/icones/icones/Voltar.png" width="20" height="20"></a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,51 @@
+﻿@model WashCarLavaDevagar.Models.Lavagem
+
+@{
+    ViewData["Title"] = "Excluir Cadastro";
+}
+
+<h1>Excluir Cadastro</h1>
+
+<h3>Tem certeza que deseja excluir este cadastro?</h3>
+<div>
+    <h4>Lavagem</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoLavagem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoLavagem.Descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataLavagem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataLavagem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ValorLavagem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ValorLavagem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DescontoLavagem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DescontoLavagem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Carro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Carro.Ano)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IDLavagem" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index"><img src="~/icones/icones/Voltar.png" width="20" height="20"></a>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+﻿@model WashCarLavaDevagar.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalhes Cliente";
+}
+
+<h1>Detalhes do Cadastro</h1>
+
+<div>
+    <h4>Detalhes do Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeCliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EnderecoCliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EnderecoCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FoneCliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FoneCliente)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IDCliente">Edit</a> |
+    <a asp-action="Index"><img src="~/icones/icones/Voltar.png" width="20" height="20"></a>
+</div>

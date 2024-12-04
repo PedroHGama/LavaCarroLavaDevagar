@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WashCarLavaDevagar.Models.Lavagem>
+
+@{
+    ViewData["Title"] = "Cadstro de Lavagens";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Novo Cadastro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoLavagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataLavagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorLavagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescontoLavagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoLavagem.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLavagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorLavagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescontoLavagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carro.Placa)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IDLavagem"><img src="~/icones/icones/Edit.png" width="20" height="20"></a>| |
+                <a asp-action="Details" asp-route-id="@item.IDLavagem"><style="margin-right: 12px;"><img src="~/icones/icones/Details.png" width="20" height="20"></a> |
+                <a asp-action="Delete" asp-route-id="@item.IDLavagem"><style="margin-right: 12px;"><img src="~/icones/icones/Delete.png" width="20" height="20"></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

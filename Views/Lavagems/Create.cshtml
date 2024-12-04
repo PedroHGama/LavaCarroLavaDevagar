@@ -1,0 +1,51 @@
+﻿@model WashCarLavaDevagar.Models.Lavagem
+
+@{
+    ViewData["Title"] = "Cadastrar Lavagem";
+}
+
+<h1>Cadastro de Lavagem</h1>
+
+<h4>Lavagem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TipoLavagemID" class="control-label"></label>
+                <select asp-for="TipoLavagemID" class ="form-control" asp-items="ViewBag.TipoLavagemID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataLavagem" class="control-label"></label>
+                <input asp-for="DataLavagem" class="form-control" />
+                <span asp-validation-for="DataLavagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorLavagem" class="control-label"></label>
+                <input asp-for="ValorLavagem" class="form-control" />
+                <span asp-validation-for="ValorLavagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescontoLavagem" class="control-label"></label>
+                <input asp-for="DescontoLavagem" class="form-control" />
+                <span asp-validation-for="DescontoLavagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarroID" class="control-label"></label>
+                <select asp-for="CarroID" class ="form-control" asp-items="ViewBag.CarroID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index"><img src="~/icones/icones/Voltar.png" width="20" height="20"></a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

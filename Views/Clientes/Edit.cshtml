@@ -1,0 +1,44 @@
+﻿@model WashCarLavaDevagar.Models.Cliente
+
+@{
+    ViewData["Title"] = "Editar Cadastro";
+}
+
+<h1>Editar Cadastro</h1>
+
+<h4>Editar Cadastro do Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IDCliente" />
+            <div class="form-group">
+                <label asp-for="NomeCliente" class="control-label"></label>
+                <input asp-for="NomeCliente" class="form-control" />
+                <span asp-validation-for="NomeCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnderecoCliente" class="control-label"></label>
+                <input asp-for="EnderecoCliente" class="form-control" />
+                <span asp-validation-for="EnderecoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FoneCliente" class="control-label"></label>
+                <input asp-for="FoneCliente" class="form-control" />
+                <span asp-validation-for="FoneCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index"><img src="~/icones/icones/Voltar.png" width="20" height="20"></a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
