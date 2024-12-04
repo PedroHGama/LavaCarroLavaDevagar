@@ -41,5 +41,6 @@ Todos as bibliotecas devem ser instaladas na versão 8.0
 Laura Silva.
 
 
-## 🧑 Autor
+## 🧑 Autores
 >[@PedroHGama](https://www.github.com/pedrohgama)
+>>[@Laura0Silva](https://github.com/Laura0silva)
