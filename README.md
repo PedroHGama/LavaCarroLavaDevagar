@@ -24,8 +24,12 @@ Um vídeo demonstrativo pode ser visto [aqui](https://youtu.be/m5APCOIz098).
 2. Instale o ASP.NET Core MVC e VisualStudio: `Instale essas ferramentas`
 3. Adicione os pacotes necessários via NuGet: `Install-Package FastReport.OpenSource`
 `Install-Package FastReport.OpenSource.Export.PdfSimple`
+`Install-Package Microsoft.AspNetCore.Identity.UI`
+`Install-Package Microsoft.EntityFrameworkCore.Tools`
 `Install-Package Microsoft.EntityFrameworkCore.SqlServer`
-4. Execute `clique no ícone de play`
+`Install-Package Microsoft.AspNetCore.Authentication.Google`
+Todos as bibliotecas devem ser instaladas na versão 8.0
+5. Execute `clique no ícone de play`
 
 
 ## 💻 Tecnologias Utilizadas
