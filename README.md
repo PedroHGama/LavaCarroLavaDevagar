@@ -43,4 +43,4 @@ Laura Silva.
 
 ## 🧑 Autores
 >[@PedroHGama](https://www.github.com/pedrohgama)
->>[@Laura0Silva](https://github.com/Laura0silva)
+>[@Laura0Silva](https://github.com/Laura0silva)
